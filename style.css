@@ -14,19 +14,19 @@ body{
   justify-content: center;
   background: #1BB295;
 }
-.wrapper{
+#wrapper{
   width: 430px;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
-.wrapper h1{
+#wrapper h1{
   font-size: 25px;
   font-weight: 500;
   padding: 20px 25px;
   border-bottom: 1px solid #ccc;
 }
-.wrapper .content{
+#wrapper .content{
   margin: 25px 25px 35px;
 }
 .content .inputs{
