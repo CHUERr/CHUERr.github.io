@@ -3,7 +3,7 @@ hintTag = document.querySelector(".hint span"),
 guessLeft = document.querySelector(".guess-left span"),
 wrongLetter = document.querySelector(".wrong-letter span"),
 resetBtn = document.querySelector(".reset-btn"),
-typingInput = document.querySelector("#typing-input");
+typingInput = document.querySelector(".typing-input");
 
 let word, maxGuesses, incorrectLetters = [], correctLetters = [];
 
