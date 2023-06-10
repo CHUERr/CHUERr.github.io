@@ -1,0 +1,169 @@
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: rgb(75, 73, 73);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+.container {
+    width: 95%;
+}
+
+header {
+    padding-left: 0 !important;
+    margin-top: 5px;
+}
+
+aside {
+    margin-top: 5px;
+}
+
+.logo {
+    width: 100%;
+    background-color: skyblue;
+}
+
+.logo img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.logo span {
+    display: block;
+    height: 50x;
+    line-height: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+}
+
+.nav {
+    background-color: rgb(197, 232, 242);
+    border: 1px solid #ccc;
+}
+
+.nav a {
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-size: large;
+    width: 100%;
+}
+
+/*当进入小屏幕或超小屏幕时候，让nav li width为25%，浮动起来*/
+@media screen and (max-width: 991px) {
+    .nav li {
+        float: left;
+        width: 25%;
+    }
+
+    .nav li {
+        font-size: medium;
+    }
+}
+
+.nav a:hover {
+    background-color: #fff;
+}
+
+.nav a::before {
+    vertical-align: middle;
+    padding-right: 5px;
+    position: relative;
+    bottom: 3px;
+}
+
+.gif li {
+    display: block;
+    float: left;
+    width: 50%;
+    padding: 5px;
+}
+
+@media screen and (max-width: 767px) {
+    .gif li {
+        width: 100% !important;
+    }
+}
+
+.gif img {
+    width: 100%;
+    height: auto;
+}
+
+.publish {
+    border-top: 1px solid #ccc;
+}
+
+.publish .pic {
+    margin-top: 10px;
+    margin-left: -10px;
+}
+
+.publish img {
+    width: 100%;
+}
+
+.publish .row {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.blog {
+    display: block;
+    border: 1px solid skyblue;
+    padding: 15px;
+    margin: 15px 0;
+}
+
+.blog span {
+    margin-bottom: 15px;
+}
+
+.video video {
+    width: 100%;
+}
+
+.music .row {
+    border-bottom: none;
+    padding: 10px;
+}
+
+.music span {
+    height: 50px;
+    float: left;
+    line-height: 50px;
+    font-size: medium;
+    position: relative;
+    top: 5px;
+    margin-right: 20px;
+}
+
+footer .row {
+    border-top: 5px solid pink;
+    padding: 10px 0;
+}
+
+footer li {
+    font-size: medium;
+    font-style: italic;
+    /*斜体*/
+}
