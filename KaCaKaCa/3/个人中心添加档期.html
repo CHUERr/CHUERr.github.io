@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Calendar Schedule Book</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css">
+
+
+    <style>
+
+      /* 个人中心——添加日程——CSS */
+        .schedule-book-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .schedule-book-table th,
+        .schedule-book-table td {
+            text-align: center;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+
+
+<!-- 个人中心——添加日程——html -->
+    <div class="container schedule-book-container">
+        <form id="schedule-form">
+            <div class="row mb-2">
+                <div class="col">
+                    <label for="date-input" class="form-label">日期</label>
+                    <input type="date" id="date-input" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="activity-input" class="form-label">活动</label>
+                    <input type="text" id="activity-input" class="form-control" required>
+                </div>
+                <div class="col">
+                    <label for="remark-input" class="form-label">备注</label>
+                    <input type="text" id="remark-input" class="form-control">
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">添加日程</button>
+        </form>
+
+        <table class="table table-bordered schedule-book-table mt-4">
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>活动</th>
+                    <th>备注</th>
+                </tr>
+            </thead>
+            <tbody id="schedule-table-body">
+                <tr>
+                    <td>2023-07-06</td>
+                    <td>会议</td>
+                    <td>地点：会议室A</td>
+                </tr>
+                <tr>
+                    <td>2023-07-08</td>
+                    <td>约会</td>
+                    <td>地点：咖啡馆</td>
+                </tr>
+                <!-- 添加更多日程 -->
+            </tbody>
+        </table>
+    </div>
+
+<!-- 个人中心添加日程 JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#schedule-form').submit(function (event) {
+                event.preventDefault();
+
+                var date = $('#date-input').val();
+                var activity = $('#activity-input').val();
+                var remark = $('#remark-input').val();
+
+                var newRowHtml = '<tr><td>' + date + '</td><td>' + activity + '</td><td>' + remark + '</td></tr>';
+                $('#schedule-table-body').append(newRowHtml);
+
+                $('#date-input').val('');
+                $('#activity-input').val('');
+                $('#remark-input').val('');
+            });
+        });
+    </script>
+</body>
+
+</html>
